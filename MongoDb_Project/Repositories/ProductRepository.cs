@@ -63,5 +63,13 @@ namespace MongoDb_Project.Repositories
                 Console.WriteLine("Updated:)");
         }
         #endregion
+
+        #region Delete
+        public void Delete(Guid Id)
+        {
+            var filter = Builders<Product>.Filter.Eq(x => x.Id, Id);
+            _productCollection.DeleteOne(filter);
+        }
+        #endregion
     }
 }
