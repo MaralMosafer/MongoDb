@@ -41,8 +41,26 @@ namespace MongoDb_Project.Repositories
         {
             //Equal
             //فیلد آیدی برابر باشه با آیدی که دریافت کردم
-            var filter = Builders<Product>.Filter.Eq("", Id);
+            var filter = Builders<Product>.Filter.Eq("Id", Id);
             return _productCollection.Find(filter).FirstOrDefault();
+        }
+        #endregion
+
+        #region Update
+        public void Edit(Guid Id, Product product)
+        {
+            var filter = Builders<Product>.Filter.Eq(x => x.Id, Id);
+
+            var updatedProduct = Builders<Product>.Update
+                .Set(p => p.Name, product.Name)
+                .Set(p => p.Description, product.Description)
+                .Set(p => p.Category, product.Category)
+                .Set(p => p.Price, product.Price);
+
+            var result = _productCollection.UpdateOne(filter, updatedProduct);
+
+            if (result.MatchedCount == 1 && result.ModifiedCount == 1)
+                Console.WriteLine("Updated:)");
         }
         #endregion
     }
