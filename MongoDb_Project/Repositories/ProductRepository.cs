@@ -1,4 +1,5 @@
-﻿using MongoDB.Driver;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
 using MongoDb_Project.Entities;
 
 namespace MongoDb_Project.Repositories
@@ -25,6 +26,13 @@ namespace MongoDb_Project.Repositories
         public void Add(Product product)
         {
             _productCollection.InsertOne(product);
+        }
+        #endregion
+
+        #region List
+        public List<Product> GetList()
+        {
+            return _productCollection.Find(new BsonDocument()).ToList();
         }
         #endregion
     }
