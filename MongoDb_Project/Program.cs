@@ -11,4 +11,10 @@ product.Add(new Product
     Price = 40000000,
 });
 
+var getProducts = product.GetList();
+foreach (var prd in getProducts)
+{
+    Console.WriteLine($"Id:{prd.Id} Name:{prd.Name} ");
+}
+
 Console.ReadKey();
