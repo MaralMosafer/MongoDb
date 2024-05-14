@@ -35,5 +35,15 @@ namespace MongoDb_Project.Repositories
             return _productCollection.Find(new BsonDocument()).ToList();
         }
         #endregion
+
+        #region Search By Id
+        public Product FinddBy(Guid Id)
+        {
+            //Equal
+            //فیلد آیدی برابر باشه با آیدی که دریافت کردم
+            var filter = Builders<Product>.Filter.Eq("", Id);
+            return _productCollection.Find(filter).FirstOrDefault();
+        }
+        #endregion
     }
 }
