@@ -15,14 +15,17 @@
 حالا MongoDB یک دیتابیس رایگان و اوپن سورس هست که تحت مجوز GNU Affero General Public منتشر شده که داده ها رو در فرمت سندگرا (document-oriented) ذخیره می کنه.
  از اسناد با الگو Json شکل استفاده میکنه. و داده ها رو با فرمت  BSON یا Binary JSON ذخیره می کنه.اما از Json به عنوان فرمت ورودی / خروجی ترجیح میده استفاده کنه.
 
- > براتون کامل جزوشو نوشتم نگران نباشید!
+> براتون کامل جزوشو نوشتم نگران نباشید!<br>
 > هرچیزی که لازم دارید داخل جزوه هست و نیازی به هیچ آموزشی ندارید دیگه!
 
  <p align="center">
 <img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
 </p>
 
- ![MongoDbInCsharp](https://blog.faradars.org/wp-content/uploads/2022/04/What-is-MongoDB-Database.jpg)
+
+ <p align="center">
+<img src="https://blog.kakaocdn.net/dn/k0veY/btrLhPNSCSQ/77KYqE9HinN85evIvuEIF0/img.png" width="100%">
+</p>
  
 <p align="center">
 <img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
